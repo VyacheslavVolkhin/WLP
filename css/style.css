@@ -2448,6 +2448,9 @@ select::-ms-expand {
   display: block;
   position: absolute;
 }
+body.compensate-for-scrollbar {
+  overflow: visible !important;
+}
 @media (max-width: 639px) {
   .frm-popup .frm-popup-title {
     font-size: 20px;
