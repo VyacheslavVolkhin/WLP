@@ -1,9 +1,16 @@
 :root {
-	--clr-base: #000;
-	--clr-att: #f00;
+    --clr-base-dark: #000;
+	--clr-base: #2B2C34;
+    --clr-text: #3D4857;
+    --clr-text-light: #B5C8CF;
+	--clr-att: #C75633;
+    --clr-bg-dark: #2B2C34;
+    --clr-bg-att: #FF7C00;
+    --clr-bg: #FF7C00;
+    --clr-bg-second: #78A0AD;
 
-	--min: 320px;
-	--max: 1200px;
+	--min: 360px;
+	--max: 1500px;
 
 	font-size: 10px;
 }
@@ -19,9 +26,12 @@
 body {
 	color: var(--clr-base, #000);
 	background: #fff;
+    font-size: 14px;
+    line-height: 18.9/14;
 }
 p, ul, ol {
 	position: relative;
+    margin-bottom: 18.9/14em;
 	img {
 		max-width: 100%;
 	}
@@ -37,16 +47,17 @@ a {
 	text-decoration: none;
 	color: var(--clr-att, #f00);
 	&:hover {
+        color: var(--clr-text);
 		text-decoration: none;
-		color: var(--clr-att, #f00);
+        //filter: brightness(1.2);
 	}
 }
 a.link-main, .link-main {
 	text-decoration: none;
 	border-bottom: 1px solid;
-	&:hover {
-		border-bottom: none;
-	}
+}
+.link-phone {
+    white-space: nowrap;
 }
 h1, .h1-title,
 h2, .h2-title,
@@ -56,7 +67,62 @@ h5, .h5-title,
 h6, .h6-title {
 	display: block;
 	position: relative;
+    font-weight: bold;
+    margin: 0 0 15px 0;
     &:first-child {
         margin-top: 0;
+    }
+}
+h1, .h1-title {
+    font-size: 24px;
+}
+h2, .h2-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+h3, .h3-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+    h1, .h1-title {
+        font-size: 36px;
+    }
+    h2, .h2-title {
+        font-size: 20px;
+    }
+    h3, .h3-title {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+    p, ul, ol {
+        margin-bottom: 21.6/16em;
+    }
+    h1, .h1-title {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    h2, .h2-title {
+        font-size: 22px;
+    }
+    h3, .h3-title {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1400px) {
+
+    h1, .h1-title {
+        font-size: 48px;
+    }
+    h2, .h2-title {
+        font-size: 24px;
+    }
+    h3, .h3-title {
+        font-size: 16px;
     }
 }

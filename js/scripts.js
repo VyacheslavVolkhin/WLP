@@ -19,8 +19,9 @@ $(document).ready(function(){
 	  });
 	  return this;
 	};
-
-	//popup block
+    
+	
+    //popup block
 	$('.js-popup-wrap .js-btn-toggle').on('click', function() {
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active');
@@ -100,6 +101,29 @@ $(document).ready(function(){
 			$(this).addClass('active').next('.js-tab-content').slideDown(200);
 		}
 	})
+    
+
+
+    //main-gallery-box
+    if (!!$('.main-gallery-box').offset()) {
+        $('.main-gallery-box .slider').slick({
+            dots: false,
+            slidesToShow: 2,
+            variableWidth: true,
+            infinite: true,
+            adaptiveHeight: false,
+            prevArrow: false,
+            nextArrow: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+            ]
+        });
+    }
 	
 });
 
